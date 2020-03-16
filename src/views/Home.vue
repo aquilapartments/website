@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-8 visible-xs">
         <carousel :perPage=1>
-          <slide v-for="slide in homeslider" v-bind:key="slide.order">
+          <slide v-for="slide in topslide" v-bind:key="slide.order">
             <div class="slidehome-img" :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'"></div>
           </slide>
         </carousel>
@@ -61,24 +61,10 @@
           <div class="swiper-container" style="margin-bottom:100px; overflow:inherit">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                <div class="swiper-slide home-slide" style="background-image:url('/placeholders/slide_home.jpg')">
+                <div class="swiper-slide home-slide" v-for="slide in bottomslide" v-bind:key="slide.order"  :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'">
                   <div class="slide-shadow"></div>
                   <div class="slide-button">
-                    <div class="slide-button-head">Lorem ipsum</div>
-                    Explore <img src="../../public/img/arrow.png" height="14">
-                  </div>
-                </div> <!--slide-->
-                <div class="swiper-slide home-slide" style="background-image:url('/placeholders/slide_home.jpg')">
-                  <div class="slide-shadow"></div>
-                  <div class="slide-button">
-                    <div class="slide-button-head">Lorem ipsum</div>
-                    Explore <img src="../../public/img/arrow.png" height="14">
-                  </div>
-                </div> <!--slide-->
-                <div class="swiper-slide home-slide" style="background-image:url('/placeholders/slide_home.jpg')">
-                  <div class="slide-shadow"></div>
-                  <div class="slide-button">
-                    <div class="slide-button-head">Lorem ipsum</div>
+                    <div class="slide-button-head">{{ slide.caption }}</div>
                     Explore <img src="../../public/img/arrow.png" height="14">
                   </div>
                 </div> <!--slide-->
@@ -124,6 +110,8 @@
         swiper: Swiper,
         translations: contents.translations,
         homeslider: contents.homeslider,
+        topslide: [],
+        bottomslide: [],
         homebox: contents.homebox,
         accomodation: contents.accomodation,
         language: 'en'
@@ -134,6 +122,13 @@
       let language = localStorage.getItem('language')
       if(language !== null){
         app.language = language
+      }
+      for(let i in app.homeslider){
+        if (app.homeslider[i].type === 'top'){
+          app.topslide.push(app.homeslider[i])
+        }else{
+          app.bottomslide.push(app.homeslider[i])
+        }
       }
       new app.swiper('.swiper-container',{
         effect: 'coverflow',

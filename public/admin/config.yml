@@ -13,7 +13,9 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Order", name: "order", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Caption", name: "caption", widget: "string", required: false}
+      - {label: "Caption IT", name: "caption_it", widget: "string", required: false}
+      - {label: "Caption EN", name: "caption_en", widget: "string", required: false}
+      - {label: "Caption DE", name: "caption_de", widget: "string", required: false}
       - {label: "Type", name: "type", widget: "select", options: ["top", "bottom"]}
   - name: "homebox" # Used in routes, e.g., /admin/collections/blog
     label: "Box home" # Used in the UI
