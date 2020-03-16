@@ -5,6 +5,14 @@ backend:
   base_url: http://aquilataormina.com:3000
 media_folder: "public/uploads"
 collections:
+  - name: "homeslider" # Used in routes, e.g., /admin/collections/blog
+    label: "Slider home" # Used in the UI
+    folder: "src/contents/homeslider" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{global}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Order", name: "order", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
   - name: "translations" # Used in routes, e.g., /admin/collections/blog
     label: "Translations" # Used in the UI
     folder: "src/contents/translations" # The path to the folder where the documents are stored
@@ -15,3 +23,26 @@ collections:
       - {label: "English", name: "en", widget: "string"}
       - {label: "Italian", name: "it", widget: "string"}
       - {label: "German", name: "de", widget: "string"}
+  - name: "accomodation" # Used in routes, e.g., /admin/collections/blog
+    label: "Accomodation" # Used in the UI
+    folder: "src/contents/accomodation" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{global}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Initial Description", name: "init_description", widget: "string"}
+      - {label: "Address", name: "address", widget: "string"}
+      - {label: "Map", name: "location", widget: "map" }
+      - {label: "Long description", name: "address", widget: "markdown"}
+      - {label: "Right title 1", name: "right_title_1", widget: "string"}
+      - {label: "Right description 1", name: "right_description_1", widget: "markdown"}
+      - {label: "Right title 2", name: "right_title_2", widget: "string"}
+      - {label: "Right description 2", name: "right_description_2", widget: "markdown"}
+      - {label: "Right title 3", name: "right_title_3", widget: "string"}
+      - {label: "Right description 3", name: "right_description_3", widget: "markdown"}
+      - {label: "Right title 4", name: "right_title_4", widget: "string"}
+      - {label: "Right description 4", name: "right_description_4", widget: "markdown"}
+      - {label: "Main image", name: "main_image", widget: "image"}
+      - {label: "Second image", name: "second_image", widget: "image"}
+      - {label: "Third image", name: "third_image", widget: "image"}
