@@ -9,10 +9,24 @@ collections:
     label: "Slider home" # Used in the UI
     folder: "src/contents/homeslider" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{global}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Order", name: "order", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
+  - name: "homebox" # Used in routes, e.g., /admin/collections/blog
+    label: "Box home" # Used in the UI
+    folder: "src/contents/homebox" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Order", name: "order", widget: "string"}
+      - {label: "Title EN", name: "title_en", widget: "string"}
+      - {label: "Text EN", name: "text_en", widget: "string"}
+      - {label: "Title IT", name: "title_it", widget: "string"}
+      - {label: "Text IT", name: "text_it", widget: "string"}
+      - {label: "Title DE", name: "title_de", widget: "string"}
+      - {label: "Text DE", name: "text_de", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
   - name: "translations" # Used in routes, e.g., /admin/collections/blog
     label: "Translations" # Used in the UI
     folder: "src/contents/translations" # The path to the folder where the documents are stored
@@ -27,7 +41,7 @@ collections:
     label: "Accomodation" # Used in the UI
     folder: "src/contents/accomodation" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{global}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string"}

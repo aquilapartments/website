@@ -10,21 +10,34 @@ function importAll (r, folder) {
         for(let i = 1; i < max; i++){
             let content = contents[i]
             let cut = content.indexOf(':')
-            let property = content.substr(0,cut)
-            let value = content.replace(property + ': ','')
-            if(property !== '' && value !== ''){
-                files[folder][slug][property] = value
+            if(cut !== -1){
+                let property = content.substr(0,cut)
+                let value = content.replace(property + ': ','')
+                if(property !== '' && value !== ''){
+                    if(value !== '>-'){
+                        files[folder][slug][property] = value
+                    }else{
+                        files[folder][slug][property] = ''
+                    }
+                }
+            }else if(content !== '---'){
+                let property
+                for(let k in files[folder][slug]){
+                    property = k
+                }
+                files[folder][slug][property] += content.trim()
             }
         }
     });
 }
 
 importAll(require.context('./translations', true, /\.md$/), 'translations');
-importAll(require.context('./sliderhome', true, /\.md$/), 'sliderhome');
+importAll(require.context('./homeslider', true, /\.md$/), 'homeslider');
 importAll(require.context('./accomodation', true, /\.md$/), 'accomodation');
+importAll(require.context('./homebox', true, /\.md$/), 'homebox');
 
 module.exports = {
     translations: files['translations'],
-    sliderhome: files['sliderhome'],
+    homeslider: files['homeslider'],
     accomodation: files['accomodation']
 } 

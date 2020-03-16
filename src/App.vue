@@ -14,10 +14,10 @@
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
-              <b-nav-item class="navbar-href" v-bind:class="{ menuselected: route === 'home' }" href="/#/">Home</b-nav-item>
-              <b-nav-item class="navbar-href" v-bind:class="{ menuselected: route === 'accomodation' }" href="/#/accomodation">Accomodation</b-nav-item>
-              <b-nav-item class="navbar-href" v-bind:class="{ menuselected: route === 'about' }" href="/#/about-taormina">About Taormina</b-nav-item>
-              <b-nav-item class="navbar-href" v-bind:class="{ menuselected: route === 'contact' }" href="/#/contact">Contact</b-nav-item>
+              <b-nav-item class="navbar-href" v-bind:class="{ menuselected: route === 'home' }" href="/#/">{{ translations.home[language] }}</b-nav-item>
+              <b-nav-item class="navbar-href" v-bind:class="{ menuselected: route === 'accomodation' }" href="/#/accomodation">{{ translations.accomodation[language] }}</b-nav-item>
+              <b-nav-item class="navbar-href" v-bind:class="{ menuselected: route === 'about' }" href="/#/about-taormina">{{ translations.about_taormina[language] }}</b-nav-item>
+              <b-nav-item class="navbar-href" v-bind:class="{ menuselected: route === 'contact' }" href="/#/contact">{{ translations.contact[language] }}</b-nav-item>
               <b-nav-item class="navbar-href visible-xs" href="https://instagram.com" target="_blank">Instagram</b-nav-item>
               <b-nav-item class="navbar-href visible-xs" href="#" target="_blank">
                 <span v-on:click="changeLanguage('en')" v-bind:class="{ langselected: language === 'en' }" style="cursor:pointer">ENG</span> | 
@@ -40,7 +40,7 @@
       </div>
       <div class="col-sm-4 border-mobile" style="padding:30px 0; font-size:18px;">
         <img src="../public/img/mail.png" height="40"><br><br>
-        <a style="font-size:18px; color:#fff!important; text-decoration:none" href="mailto:info@aquilapartments.com">info@aquilapartments.com</a>
+        <a style="font-size:18px; color:#fff!important; text-decoration:none" href="mailto:info@aquilataormina.com">info@aquilataormina.com</a>
       </div>
       <div class="col-sm-4" style="padding:30px 0; font-size:18px;">
         <img src="../public/img/sun.png" height="40"><br><br>
@@ -55,11 +55,13 @@
   </div>
 </template>
 <script>
+  import * as contents from '@/contents/get'
   export default {
     data: function() {
      return {
         route: '',
-        language: 'en'
+        language: 'en',
+        translations: contents.translations
       }
     },
     watch:{
