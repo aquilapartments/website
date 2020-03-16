@@ -18,7 +18,7 @@
       </div>
       <div class="col-sm-8 hidden-xs">
         <carousel :perPage=1>
-          <slide v-for="slide in homeslider" v-bind:key="slide.order">
+          <slide v-for="slide in bottomslide" v-bind:key="slide.order">
             <div class="slidehome-img" :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'"></div>
           </slide>
         </carousel>
@@ -78,7 +78,7 @@
     <div class="" style="margin-bottom:100px">
       <div class="row">
         <div class="col-sm-8 visible-xs">
-          <img src="../../public/placeholders/yacht.jpg" style="width:100%">
+          <img :src="extraservice.image.replace('/public','')" style="width:100%">
         </div>
         <div class="col-sm-4">
           <div class="home-slide-description">
@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="col-sm-8 hidden-xs">
-          <img src="../../public/placeholders/yacht.jpg" style="width:100%">
+          <img :src="extraservice.image.replace('/public','')" style="width:100%">
         </div>
       </div>
     </div>
@@ -114,7 +114,7 @@
         bottomslide: [],
         homebox: contents.homebox,
         accomodation: contents.accomodation,
-        extraservice: contents.extraservice[0],
+        extraservice: contents.extraservice['1'],
         language: 'en'
       }
     },
