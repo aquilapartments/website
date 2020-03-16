@@ -38,8 +38,8 @@
     <div class="row">
       <div class="col-sm-4" v-for="box in homebox" v-bind:key="box.order">
         <div class="home-tile">
-          <h4>{{ box.title }}</h4>
-          <p>{{ box.text }}</p>
+          <h4>{{ box['title_' + language] }}</h4>
+          <p>{{ box['text_' + language] }}</p>
           <a :href="'/#/' + box.link"><div class="btn btn-aquila-transparent">{{ translations.learn_more[language] }} <img src="../../public/img/arrow_white.png" height="14"></div></a>
         </div>
       </div><!--col-4-->
@@ -64,7 +64,7 @@
                 <div class="swiper-slide home-slide" v-for="slide in bottomslide" v-bind:key="slide.order"  :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'">
                   <div class="slide-shadow"></div>
                   <div class="slide-button">
-                    <div class="slide-button-head">{{ slide.caption }}</div>
+                    <div class="slide-button-head">{{ slide['caption_' + language] }}</div>
                     Explore <img src="../../public/img/arrow.png" height="14">
                   </div>
                 </div> <!--slide-->

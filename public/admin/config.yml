@@ -9,7 +9,7 @@ collections:
     label: "Slider home" # Used in the UI
     folder: "src/contents/homeslider" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{type}}-{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Order", name: "order", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
@@ -21,7 +21,7 @@ collections:
     label: "Box home" # Used in the UI
     folder: "src/contents/homebox" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{type}}-{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Order", name: "order", widget: "string"}
       - {label: "Title EN", name: "title_en", widget: "string"}
