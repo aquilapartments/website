@@ -60,7 +60,7 @@ collections:
     label: "Accomodation" # Used in the UI
     folder: "src/contents/accomodation" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{title}}-{{language}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Language", name: "language", widget: "select", options: ["it","en","de"]}
       - {label: "Title", name: "title", widget: "string"}
