@@ -35,10 +35,12 @@ importAll(require.context('./translations', true, /\.md$/), 'translations');
 importAll(require.context('./homeslider', true, /\.md$/), 'homeslider');
 importAll(require.context('./accomodation', true, /\.md$/), 'accomodation');
 importAll(require.context('./homebox', true, /\.md$/), 'homebox');
+importAll(require.context('./extraservice', true, /\.md$/), 'extraservice');
 
 module.exports = {
     translations: files['translations'],
     homeslider: files['homeslider'],
     accomodation: files['accomodation'],
-    homebox: files['homebox']
+    homebox: files['homebox'],
+    extraservice: files['extraservice']
 } 
