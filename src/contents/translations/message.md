@@ -1,6 +1,6 @@
 ---
 global: message
 en: Message
-it: Messaggi
+it: Messaggio
 de: Message
 ---
