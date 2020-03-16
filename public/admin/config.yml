@@ -2,7 +2,7 @@ backend:
   name: github
   repo: aquilapartments/website
   branch: master
-  base_url: http://auth.aquilataormina.com:3000
+  base_url: http://aquilataormina.com:3000
 media_folder: "public/uploads"
 collections:
   - name: "translations" # Used in routes, e.g., /admin/collections/blog
