@@ -10,7 +10,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a metus.</p>
           <img src="../../public/img/pin.png" style="margin-right:10px;" height="36"> <b>Piazza Varò 98039 Taormina ME</b>
           <br><br>       
-          <a href="#"><div class="btn btn-aquila">BOOK NOW</div></a>
+          <a href="#"><div class="btn btn-aquila">{{ translations.book_now[language] }}</div></a>
         </div>
       </div>
       <div class="col-sm-8 hidden-xs">
@@ -106,10 +106,14 @@
 </template>
 
 <script>
+  import * as contents from '@/contents/get'
   export default {
     name: 'accomodation',
     data () {
       return{
+        translations: contents.translations,
+        accomodation: contents.accomodation,
+        language: 'en',
         form: {
           from: '',
           to: '',
@@ -119,6 +123,13 @@
           message: '',
           email: ''
         }
+      }
+    },
+    mounted () {
+      const app = this
+      let language = localStorage.getItem('language')
+      if(language !== null){
+        app.language = language
       }
     }
   }

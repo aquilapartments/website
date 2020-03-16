@@ -62,6 +62,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {label: "Language", name: "language", widget: "select", options: ["it","en","de"]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Initial Description", name: "init_description", widget: "string"}
