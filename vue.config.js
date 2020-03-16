@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-    outputDir: path.resolve(__dirname, "./public_html"),
+    outputDir: path.resolve(__dirname, "./html"),
     chainWebpack: config => {
       config
         .module
