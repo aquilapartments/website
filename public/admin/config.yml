@@ -68,7 +68,7 @@ collections:
       - {label: "Initial Description", name: "init_description", widget: "string"}
       - {label: "Address", name: "address", widget: "string"}
       - {label: "Map", name: "location", widget: "string" }
-      - {label: "Long description", name: "address", widget: "markdown"}
+      - {label: "Long description", name: "long_description", widget: "markdown"}
       - {label: "Right title 1", name: "right_title_1", widget: "string"}
       - {label: "Right description 1", name: "right_description_1", widget: "markdown"}
       - {label: "Right title 2", name: "right_title_2", widget: "string"}

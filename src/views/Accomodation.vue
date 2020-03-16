@@ -48,7 +48,7 @@
       <div class="row">
         <div class="col-sm-9">
           <div class="accomodation-description">
-            <h1>Description<br><span style="font-weight:100">Number 1</span></h1>
+            <h1>{{ translations.description[language] }}<br><span style="font-weight:100">{{ accomodation.subtitle }}</span></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a metus. Vivamus urna dolor, rhoncus sit amet ante vitae, lobortis sodales orci. Nulla sodales eleifend dolor eget faucibus. Quisque nibh odio, dapibus at tempor venenatis, vestibulum at augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a metus. Vivamus urna dolor, rhoncus sit amet ante vitae, lobortis sodales orci. Nulla sodales eleifend dolor eget faucibus. Quisque nibh odio, dapibus.</p>
           </div>
         </div>
