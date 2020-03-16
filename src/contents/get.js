@@ -20,6 +20,11 @@ function importAll (r, folder) {
 }
 
 importAll(require.context('./translations', true, /\.md$/), 'translations');
+importAll(require.context('./sliderhome', true, /\.md$/), 'sliderhome');
+importAll(require.context('./accomodation', true, /\.md$/), 'accomodation');
+
 module.exports = {
-    translations: files['translations']
+    translations: files['translations'],
+    sliderhome: files['sliderhome'],
+    accomodation: files['accomodation']
 } 
