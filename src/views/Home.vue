@@ -82,9 +82,9 @@
         </div>
         <div class="col-sm-4">
           <div class="home-slide-description">
-            <h1>Rent a Yacht</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="big-arrow"><img src="../../public/img/arrow_big.png" height="70"></a>
+            <h1>{{ extraservice['title_' + language] }}</h1>
+            <p>{{ extraservice['description_' + language] }}</p>
+            <a :href="extraservice.link" class="big-arrow"><img src="../../public/img/arrow_big.png" height="70"></a>
           </div>
         </div>
         <div class="col-sm-8 hidden-xs">
@@ -114,6 +114,7 @@
         bottomslide: [],
         homebox: contents.homebox,
         accomodation: contents.accomodation,
+        extraservice: contents.extraservice[0],
         language: 'en'
       }
     },
