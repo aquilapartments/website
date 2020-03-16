@@ -1,0 +1,19 @@
+{
+  "name": "git-watcher",
+  "version": "1.0.0",
+  "description": "Git and rebuild watcher",
+  "main": "git.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon",
+    "start": "node git.js"
+  },
+  "author": "turinglabsorg",
+  "license": "MIT",
+  "dependencies": {
+    "simple-git": "^1.132.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
