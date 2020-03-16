@@ -1,6 +1,6 @@
 ---
-order: '2'
-image: /public/uploads/slide_home.jpg
+order: '1'
+image: /public/uploads/accomodation.jpg
 caption_it: Lorem ipsum
 caption_en: Lorem ipsum
 caption_de: Lorem ipsum
