@@ -6,16 +6,7 @@ init_description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex
   velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra
   eget, consectetur a metus.
-address: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex
-  velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra
-  eget, consectetur a metus. Vivamus urna dolor, rhoncus sit amet ante vitae,
-  lobortis sodales orci. Nulla sodales eleifend dolor eget faucibus. Quisque
-  nibh odio, dapibus at tempor venenatis, vestibulum at augue. Lorem ipsum dolor
-  sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi
-  dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a
-  metus. Vivamus urna dolor, rhoncus sit amet ante vitae, lobortis sodales orci.
-  Nulla sodales eleifend dolor eget faucibus. Quisque nibh odio, dapibus.
+address: Piazza Varò 98039 Taormina ME
 location: '{"type":"Point","coordinates":[15.3015286,37.8563815]}'
 right_title_1: Parking Garage
 right_description_1: >-
