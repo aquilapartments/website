@@ -13,11 +13,13 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Order", name: "order", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Caption", name: "caption", widget: "string", required: false}
+      - {label: "Type", name: "type", widget: "select", options: ["top", "bottom"]}
   - name: "homebox" # Used in routes, e.g., /admin/collections/blog
     label: "Box home" # Used in the UI
     folder: "src/contents/homebox" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{type}}-{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Order", name: "order", widget: "string"}
       - {label: "Title EN", name: "title_en", widget: "string"}

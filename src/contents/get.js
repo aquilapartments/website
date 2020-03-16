@@ -39,5 +39,6 @@ importAll(require.context('./homebox', true, /\.md$/), 'homebox');
 module.exports = {
     translations: files['translations'],
     homeslider: files['homeslider'],
-    accomodation: files['accomodation']
+    accomodation: files['accomodation'],
+    homebox: files['homebox']
 } 

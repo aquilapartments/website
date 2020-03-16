@@ -49,9 +49,9 @@
       <div class="img" style="background-image:url('/placeholders/focus.jpg')"></div>
       <div class="home-focus-discovering"></div>
       <div class="col-12 text-center" style="padding:200px 100px; color:#fff">
-        <h1>Discovery Taormina</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a metus. Vivamus urna dolor, rhoncus sit amet ante vitae, lobortis sodales orci. </p>
-        <a href="#"><div class="btn btn-aquila-white">Learn more <img src="../../public/img/arrow_white.png" height="14"></div></a>
+        <h1>{{ translations.home_discoverytaormina_title[language] }}</h1>
+        <p>{{ translations.home_discoverytaormina_preview[language] }}</p>
+        <a href="/#/about-taormina"><div class="btn btn-aquila-white">{{ translations.learn_more[language] }} <img src="../../public/img/arrow_white.png" height="14"></div></a>
       </div>
     </div>
 
