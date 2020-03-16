@@ -81,6 +81,7 @@
         const app = this
         app.language = lang
         localStorage.setItem('language',lang)
+        location.reload()
       }
     }
   }

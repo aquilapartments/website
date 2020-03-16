@@ -13,7 +13,7 @@
       </div>
       <div class="col-sm-4">
         <div class="home-slide-description">
-          <h1>Aquila</h1>
+          <h1>{{ translations.hello_world[language] }}</h1>
           <h1 style="font-weight:200!important">Luxury Apartments</h1><br>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a metus. Vivamus urna dolor, rhoncus sit amet ante vitae, lobortis sodales orci. Nulla sodales eleifend dolor eget faucibus. Quisque nibh odio, dapibus at tempor venenatis, vestibulum at augue.</p><br>
           <br><a href="#"><div class="btn btn-aquila">BOOK NOW</div></a>
@@ -154,7 +154,6 @@
   import { Carousel, Slide } from 'vue-carousel';
   import Swiper from 'swiper';
   import * as contents from '@/contents/get'
-
   export default {
     name: 'home',
     components: {
@@ -164,11 +163,16 @@
     data () {
       return {
         swiper: Swiper,
-        translations: contents.translations
+        translations: contents.translations,
+        language: 'en'
       }
     },
     mounted () {
       const app = this
+      let language = localStorage.getItem('language')
+      if(language !== null){
+        app.language = language
+      }
       new app.swiper('.swiper-container',{
         effect: 'coverflow',
         grabCursor: true,
