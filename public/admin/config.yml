@@ -2,8 +2,7 @@ backend:
   name: github
   repo: aquilapartments/website
   branch: master
-  api_root: https://api.github.com
-  base_url: https://api.netlify.com
+  base_url: http://auth.aquilataormina.com:3000
 media_folder: "public/uploads"
 collections:
   - name: "translations" # Used in routes, e.g., /admin/collections/blog
