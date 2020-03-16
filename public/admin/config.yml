@@ -78,5 +78,11 @@ collections:
       - {label: "Right title 4", name: "right_title_4", widget: "string"}
       - {label: "Right description 4", name: "right_description_4", widget: "markdown"}
       - {label: "Main image", name: "main_image", widget: "image"}
-      - {label: "Second image", name: "second_image", widget: "image"}
-      - {label: "Third image", name: "third_image", widget: "image"}
+  - name: "accomodationslider" # Used in routes, e.g., /admin/collections/blog
+    label: "Slider accomodation" # Used in the UI
+    folder: "src/contents/accomodationslider" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{order}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Order", name: "order", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}

@@ -13,12 +13,20 @@ function importAll (r, folder) {
             if(cut !== -1){
                 let property = content.substr(0,cut)
                 let value = content.replace(property + ': ','')
-                if(property !== '' && value !== ''){
-                    if(value !== '>-'){
-                        files[folder][slug][property] = value
-                    }else{
-                        files[folder][slug][property] = ''
+                if(property.trim() !== 'https' && property.trim() !== 'http'){
+                    if(property !== '' && value !== ''){
+                        if(value !== '>-'){
+                            files[folder][slug][property] = value
+                        }else{
+                            files[folder][slug][property] = ''
+                        }
                     }
+                }else{
+                    property = ''
+                    for(let k in files[folder][slug]){
+                        property = k
+                    }
+                    files[folder][slug][property] += content.trim()
                 }
             }else if(content !== '---'){
                 let property
@@ -36,11 +44,13 @@ importAll(require.context('./homeslider', true, /\.md$/), 'homeslider');
 importAll(require.context('./accomodation', true, /\.md$/), 'accomodation');
 importAll(require.context('./homebox', true, /\.md$/), 'homebox');
 importAll(require.context('./extraservice', true, /\.md$/), 'extraservice');
+importAll(require.context('./accomodationslider', true, /\.md$/), 'accomodationslider');
 
 module.exports = {
     translations: files['translations'],
     homeslider: files['homeslider'],
     accomodation: files['accomodation'],
     homebox: files['homebox'],
-    extraservice: files['extraservice']
+    extraservice: files['extraservice'],
+    accomodationslider: files['accomodationslider']
 } 

@@ -6,15 +6,15 @@
       </div>
       <div class="col-sm-4">
         <div class="home-slide-description">
-          <h1>Accomodation<br><span style="font-weight:100">Number 1</span></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a metus.</p>
-          <img src="../../public/img/pin.png" style="margin-right:10px;" height="36"> <b>Piazza Varò 98039 Taormina ME</b>
+          <h1>{{ accomodation.title }}<br><span style="font-weight:100">{{ accomodation.subtitle }}</span></h1>
+          <p>{{ accomodation.initial_description }}</p>
+          <img src="../../public/img/pin.png" style="margin-right:10px;" height="36"> <b>{{ accomodation.address }}</b>
           <br><br>       
           <a href="#"><div class="btn btn-aquila">{{ translations.book_now[language] }}</div></a>
         </div>
       </div>
       <div class="col-sm-8 hidden-xs">
-        <img src="../../public/placeholders/accomodation.jpg" style="width:100%">
+        <img :src="accomodation.main_image.replace('/public','')" style="width:100%">
       </div>
     </div>
     
@@ -112,7 +112,8 @@
     data () {
       return{
         translations: contents.translations,
-        accomodation: contents.accomodation,
+        accomodations: contents.accomodation,
+        accomodation: '',
         language: 'en',
         form: {
           from: '',
@@ -131,6 +132,7 @@
       if(language !== null){
         app.language = language
       }
+      app.accomodation = app.accomodations['accomodation-' + language]
     }
   }
 </script>
