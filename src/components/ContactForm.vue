@@ -64,14 +64,21 @@
         const app = this
         if(app.form.from !== '' && app.form.to !== '' && app.form.name !== '' && app.form.children !== '' && app.form.adults !== '' && app.form.email !== ''){
           app.isSending = true
-          let url = 'http://aquilataormina:3002'
+          let url = 'http://aquilataormina.com:3002'
           if(window.location.host !== undefined){
-            url = 'http://' + window.location.host.replace('8080','3002')
+            url = 'http://' + window.location.host.replace(':8080','') + ':3002'
           }
           let response = await app.axios.post(url + '/send', app.form)
           app.isSending = false
           if(response.data.accepted.length > 0){
             alert(app.translations.send_success[app.language])
+            app.form.from = ''
+            app.form.to = ''
+            app.form.message = ''
+            app.form.name = ''
+            app.form.adults = ''
+            app.form.children = ''
+            app.form.email = ''
           }else{
             alert(app.translations.send_failed[app.language])
           }
