@@ -70,18 +70,14 @@
           }
           let response = await app.axios.post(url + '/send.php', app.form)
           app.isSending = false
-          if(response.data.accepted.length > 0){
-            alert(app.translations.send_success[app.language])
-            app.form.from = ''
-            app.form.to = ''
-            app.form.message = ''
-            app.form.name = ''
-            app.form.adults = ''
-            app.form.children = ''
-            app.form.email = ''
-          }else{
-            alert(app.translations.send_failed[app.language])
-          }
+          alert(app.translations.send_success[app.language])
+          app.form.from = ''
+          app.form.to = ''
+          app.form.message = ''
+          app.form.name = ''
+          app.form.adults = ''
+          app.form.children = ''
+          app.form.email = ''
         }else{
           alert(app.translations.fill_all_fields[app.language])
         }

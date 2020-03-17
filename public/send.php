@@ -21,14 +21,14 @@ foreach($dotenv as $prop){
 $gmail_user = $config['GMAIL_USER'];
 $gmail_password = $config['GMAIL_PASSWORD'];
 
-$data = json_decode( file_get_contents('php://input') );
+$data = json_decode( file_get_contents('php://input') , true);
 
 if(isset($data['from']) && isset($data['to']) && isset($data['adults']) && isset($data['children']) && isset($data['email']) && isset($data['name'])){
     $mail= new PHPMailer();
     $mail->CharSet="UTF-8";
     $mail->IsSMTP(); // telling the class to use SMTP
     $mail->Host       = "smtp.gmail.com"; // SMTP server
-    $mail->SMTPDebug  = 2;
+    //$mail->SMTPDebug  = 2;
     $mail->SMTPAuth   = true;                  // enable SMTP authentication
     $mail->Host       = "smtp.gmail.com"; // sets the SMTP server
     $mail->Port       = 465;
@@ -40,7 +40,10 @@ if(isset($data['from']) && isset($data['to']) && isset($data['adults']) && isset
     $mail->AddAddress($gmail_user, "Aquila Website");
     $mail->AddAddress($data['email'], $data['name']);
     $mail->Subject  = "New booking from ".$data['name'];
-    $mail->MsgHTML("New booking");
+    $message = "";
+    foreach($data as $field => $value){
+        $message.= '<b>'.$field.'</b>: '.$value.'<br>';
+    }
+    $mail->MsgHTML($message);
     $result = $mail->Send();
-    print_r($result);
 }
