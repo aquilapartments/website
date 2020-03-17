@@ -2,12 +2,21 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '/Exception.php';
-require './PHPMailer.php';
-require './SMTP.php';
+require '../phpmailer/Exception.php';
+require '../phpmailer/PHPMailer.php';
+require '../phpmailer/SMTP.php';
 
-$gmail_user = getenv('GMAIL_USER', true) ?: getenv('GMAIL_USER');
-$gmail_password = getenv('GMAIL_PASSWORD', true) ?: getenv('GMAIL_PASSWORD');
+$myfile = fopen("../phpmailer/.env", "r") or die("Unable to open file!");
+$dotenv = fread($myfile,filesize("../phpmailer/.env"));
+$dotenv = explode("\n",$dotenv);
+$config = array();
+foreach($dotenv as $prop){
+    $prop = explode('=',$prop);
+    $config[$prop[0]] = $prop[1];
+}
+
+$gmail_user = $config['GMAIL_USER'];
+$gmail_password = $config['GMAIL_PASSWORD'];
 
 if(isset($_POST['from']) && isset($_POST['to']) && isset($_POST['adults']) && isset($_POST['children']) && isset($_POST['email']) && isset($_POST['name'])){
     $mail= new PHPMailer();
