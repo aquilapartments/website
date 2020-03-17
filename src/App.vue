@@ -44,7 +44,7 @@
       </div>
       <div class="col-sm-4" style="padding:30px 0; font-size:18px;">
         <img src="../public/img/sun.png" height="40"><br><br>
-        Taormina | +38°
+        Taormina | {{ temp }}°
       </div>
     </div>
     <div class="footer">
@@ -56,12 +56,17 @@
 </template>
 <script>
   import * as contents from '@/contents/get'
+  const axios = require('axios')
   export default {
     data: function() {
      return {
         route: '',
         language: 'en',
-        translations: contents.translations
+        err: '',
+        translations: contents.translations,
+        weatherkey: '5f93d53defd8ffd592670790a95c4b73',
+        temp: 0,
+        axios: axios
       }
     },
     watch:{
@@ -70,13 +75,20 @@
             app.route = to.name
         }
     },
-    mounted (){
+    async mounted (){
       const app = this
       app.route = app.$route.name
       let language = localStorage.getItem('language')
       if(language !== null){
         app.language = language
       }
+      app.axios.get('https://api.openweathermap.org/data/2.5/weather?q=Taormina,IT&units=metric&appid=' + app.weatherkey).catch(err => {
+        console.log('Error fetching weather', err)
+      }).then(response => {
+        if(response !== undefined){
+          app.temp = response.data.list[0].main.temp
+        }
+      })
     },
     methods: {
       changeLanguage(lang){

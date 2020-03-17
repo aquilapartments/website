@@ -68,7 +68,7 @@
           if(window.location.host !== undefined){
             url = 'https://' + window.location.host
           }
-          let response = await app.axios.post(url + '/send.php', app.form)
+          await app.axios.post(url + '/send.php', app.form)
           app.isSending = false
           alert(app.translations.send_success[app.language])
           app.form.from = ''
