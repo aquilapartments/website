@@ -64,9 +64,9 @@
         const app = this
         if(app.form.from !== '' && app.form.to !== '' && app.form.name !== '' && app.form.children !== '' && app.form.adults !== '' && app.form.email !== ''){
           app.isSending = true
-          let url = 'http://aquilataormina.com:3002'
+          let url = 'https://aquilataormina.com:3002'
           if(window.location.host !== undefined){
-            url = 'http://' + window.location.host.replace(':8080','') + ':3002'
+            url = 'https://' + window.location.host.replace(':8080','') + ':3002'
           }
           let response = await app.axios.post(url + '/send', app.form)
           app.isSending = false
