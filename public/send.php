@@ -47,10 +47,10 @@ if(isset($data['from']) && isset($data['to']) && isset($data['adults']) && isset
     $message .= "<b>Leaving date</b>: ".$data['to']."<br>";
     $message .= "<b>Adults</b>: ".$data['adults']."<br>";
     $message .= "<b>Children</b>: ".$data['children']."<br>";
-    die($message);
     if($data['message'] != ''){
         $message .= "<b>Message</b>: ".$data['message']."<br>";
     }
     $mail->MsgHTML($message);
     $result = $mail->Send();
+    print_r($result);
 }
