@@ -23,7 +23,7 @@ if(isset($_POST['from']) && isset($_POST['to']) && isset($_POST['adults']) && is
     $mail->CharSet="UTF-8";
     $mail->IsSMTP(); // telling the class to use SMTP
     $mail->Host       = "smtp.gmail.com"; // SMTP server
-    // $mail->SMTPDebug  = 2;
+    $mail->SMTPDebug  = 2;
     $mail->SMTPAuth   = true;                  // enable SMTP authentication
     $mail->Host       = "smtp.gmail.com"; // sets the SMTP server
     $mail->Port       = 465;
@@ -36,5 +36,6 @@ if(isset($_POST['from']) && isset($_POST['to']) && isset($_POST['adults']) && is
     $mail->AddAddress($_POST['email'], $_POST['name']);
     $mail->Subject  = "New booking from ".$_POST['name'];
     $mail->MsgHTML("New booking");
-    $mail->Send();
+    $result = $mail->Send();
+    print_r($result);
 }
