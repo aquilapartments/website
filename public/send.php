@@ -42,11 +42,12 @@ if(isset($data['from']) && isset($data['to']) && isset($data['adults']) && isset
     $mail->Subject  = "New booking from ".$data['name'];
     $message = "";
     $message .= "<b>E-Mail</b>: ".$data['email']."<br>";
-    $message .= "<b>Name</b>: ".$data['name']."<br><br>";
-    $message .= "<b>From</b>: ".$data['from']."<br>";
-    $message .= "<b>To</b>: ".$data['to']."<br>";
+    $message .= "<b>Name</b>: ".$data['name']."<br>";
+    $message .= "<b>Arrival date</b>: ".$data['from']."<br>";
+    $message .= "<b>Leaving date</b>: ".$data['to']."<br>";
     $message .= "<b>Adults</b>: ".$data['adults']."<br>";
     $message .= "<b>Children</b>: ".$data['children']."<br>";
+    die($message);
     if($data['message'] != ''){
         $message .= "<b>Message</b>: ".$data['message']."<br>";
     }
