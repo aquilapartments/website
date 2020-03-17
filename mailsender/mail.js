@@ -26,7 +26,7 @@ app.post('/send', (req, res) => {
     let mailOptions = {
         from: '"Aquila Website" <aquilapartments@gmail.com>',
         to: 'aquilapartments@gmail.com,' + req.body.email,
-        subject: 'New booking from website',
+        subject: 'New booking from ' + req.body.name,
         html: 'This is the request:<br>' + request
     };
     
