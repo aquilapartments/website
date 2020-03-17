@@ -41,8 +41,14 @@ if(isset($data['from']) && isset($data['to']) && isset($data['adults']) && isset
     $mail->AddAddress($data['email'], $data['name']);
     $mail->Subject  = "New booking from ".$data['name'];
     $message = "";
-    foreach($data as $field => $value){
-        $message.= '<b>'.$field.'</b>: '.$value.'<br>';
+    $message .= "<b>E-Mail</b>: ".$data['email']."<br>";
+    $message .= "<b>Name</b>: ".$data['name']."<br><br>";
+    $message .= "<b>From</b>: ".$data['from']."<br>";
+    $message .= "<b>To</b>: ".$data['to']."<br>";
+    $message .= "<b>Adults</b>: ".$data['adults']."<br>";
+    $message .= "<b>Children</b>: ".$data['children']."<br>";
+    if($data['message'] != ''){
+        $message .= "<b>Message</b>: ".$data['message']."<br>";
     }
     $mail->MsgHTML($message);
     $result = $mail->Send();
