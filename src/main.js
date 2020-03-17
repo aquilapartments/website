@@ -7,10 +7,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/custom.css'
 import VueCarousel from 'vue-carousel';
+import VueSimpleMarkdown from 'vue-simple-markdown'
+import 'vue-simple-markdown/dist/vue-simple-markdown.css'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 Vue.use(VueCarousel)
 Vue.use(BootstrapVue)
+Vue.use(VueSimpleMarkdown)
 
 new Vue({
   router,

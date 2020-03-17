@@ -1,60 +1,90 @@
 <template>
   <div class="about">
-    <div class="head-image"></div>
+    <div class="head-image" :style="'background-image:url(\''+about.main_image.replace('/public','')+'\')'"></div>
     <div class="container">
       <div class="row">
         <div class="col-sm-10 offset-md-1">
           <div class="taormina-description">
-            <h1>About <b>Taormina</b></h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a metus. Vivamus urna dolor, rhoncus sit amet ante vitae, lobortis sodales orci. Nulla sodales eleifend dolor eget faucibus. Quisque nibh odio, dapibus at tempor venenatis, vestibulum at augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a metus. Vivamus urna dolor, rhoncus sit amet ante vitae, lobortis sodales orci. Nulla sodales eleifend dolor eget faucibus. Quisque nibh odio, dapibus at tempor venenatis, vestibulum at augue.
+            <h1>{{ about.title }}</h1>
+            <vue-simple-markdown :source="about.main_description"></vue-simple-markdown>
           </div>
         </div>
       </div>
 
       <div class="row" style="margin-top:80px">
         <div class="col-sm-4 text-left left-description">
-          <h3>Parking Garage</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.</p>
-
-          <h3>Parking Garage</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.</p>
-
-          <h3>Parking Garage</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.</p>
-
-          <h3>Parking Garage</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.</p>
+          <vue-simple-markdown :source="about.secondary_description"></vue-simple-markdown>
         </div>
         <div class="col-sm-8">
-          <img src="../../public/placeholders/accomodation_2.jpg" style="width:100%"><br><br><br>
-          <img src="../../public/placeholders/accomodation_3.jpg" style="width:100%">
+          <img :src="about.second_image.replace('/public','')" style="width:100%"><br><br><br>
+          <img :src="about.third_image.replace('/public','')" style="width:100%">
         </div>
       </div>
     </div>
 
     <div class="row" style="margin-top:100px">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.369585080524!2d15.282543015414682!3d37.85164187974546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131411a39251c7f9%3A0x2654f47409ca387a!2sPiazza%20Var%C3%B2%2C%2098039%20Taormina%20ME!5e0!3m2!1sen!2sit!4v1580329882609!5m2!1sen!2sit" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <iframe :src="accomodation.location" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
 
     <div class="container" style="margin:100px 0">
       <div class="row">
         <div class="col-sm-8 visible-xs">
-          <img src="../../public/placeholders/accomodation_4.jpg" style="width:100%">
+          <img :src="about.third_image.replace('/public','')" style="width:100%">
         </div>
         <div class="col-sm-4">
           <div class="home-slide-description">
-            <h1>Accomodation 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="big-arrow"><img src="../../public/img/arrow_big.png" height="70"></a>
+            <h1>{{ accomodation.title }}</h1>
+            <p>{{ accomodation.init_description }}</p>
+            <a href="/#/accomodation" class="big-arrow"><img src="../../public/img/arrow_big.png" height="70"></a>
           </div>
         </div>
         <div class="col-sm-8 hidden-xs">
-          <img src="../../public/placeholders/accomodation_4.jpg" style="width:100%">
+          <img :src="accomodation.main_image.replace('/public','')" style="width:100%">
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+  import * as contents from '@/contents/get'
+  export default {
+    name: 'about',
+    data () {
+      return{
+        accomodations: contents.accomodation,
+        accomodation: {
+          main_image: ''
+        },
+        abouts: contents.about,
+        about: {
+          main_image: '',
+          second_image: '',
+          third_image: ''
+        },
+        language: 'en',
+        form: {
+          from: '',
+          to: '',
+          name: '',
+          adults: '',
+          children: '',
+          message: '',
+          email: ''
+        }
+      }
+    },
+    mounted () {
+      const app = this
+      let language = localStorage.getItem('language')
+      if(language !== null){
+        app.language = language
+      }
+      app.about = app.abouts[language]
+      app.accomodation = app.accomodations['accomodation-' + language]
+    }
+  }
+</script>
 
 <style scoped>
   .head-image{
@@ -70,6 +100,16 @@
     background: #FFFDF1;
     width:100%;
     padding:80px 130px;
+    text-align: justify; 
+    font-weight: 100;
+    font-size: 35px;
+    color: #8B8B8B;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 55px;
+  }
+
+  .taormina-description .markdown-body{
     text-align: justify; 
     font-weight: 100;
     font-size: 35px;

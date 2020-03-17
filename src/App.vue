@@ -100,7 +100,13 @@
     text-align: center;
     color: #2c3e50;
   }
+  .markdown-body {
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif!important;
+  }
 
+  .markdown-body h3{
+    margin-bottom: -15px!important;
+  }
   #nav a {
     font-size: 16px;
     color: #545454;

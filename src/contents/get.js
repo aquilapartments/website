@@ -33,7 +33,11 @@ function importAll (r, folder) {
                 for(let k in files[folder][slug]){
                     property = k
                 }
-                files[folder][slug][property] += content.trim()
+                if(content !== ''){
+                    files[folder][slug][property] += content.trim()
+                }else{
+                    files[folder][slug][property] += "\n"
+                }
             }
         }
     });
@@ -45,6 +49,7 @@ importAll(require.context('./accomodation', true, /\.md$/), 'accomodation');
 importAll(require.context('./homebox', true, /\.md$/), 'homebox');
 importAll(require.context('./extraservice', true, /\.md$/), 'extraservice');
 importAll(require.context('./accomodationslider', true, /\.md$/), 'accomodationslider');
+importAll(require.context('./about', true, /\.md$/), 'about');
 
 module.exports = {
     translations: files['translations'],
@@ -52,5 +57,6 @@ module.exports = {
     accomodation: files['accomodation'],
     homebox: files['homebox'],
     extraservice: files['extraservice'],
-    accomodationslider: files['accomodationslider']
+    accomodationslider: files['accomodationslider'],
+    about: files['about']
 } 

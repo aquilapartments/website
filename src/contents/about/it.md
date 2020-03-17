@@ -19,20 +19,17 @@ secondary_description: >-
   augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida
   elit in felis consequat, ac dapibus felis maximus.
 
-
   ### Parking Garage
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus
   augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida
   elit in felis consequat, ac dapibus felis maximus.
 
-
   ### Parking Garage
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus
   augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida
   elit in felis consequat, ac dapibus felis maximus.
-
 
   ### Parking Garage
 
