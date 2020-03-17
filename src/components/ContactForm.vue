@@ -22,7 +22,8 @@
             <b-form-input v-model="form.email" type="email" class="aquila-input" :placeholder="translations.email[language]"></b-form-input>
         </div>
         <div class="col-sm-12 text-center" style="margin-top:20px">
-          <div class="btn btn-aquila">{{ translations.book_now[language] }}</div>
+          <div v-if="!isSending" v-on:click="sendMail" class="btn btn-aquila">{{ translations.book_now[language] }}</div>
+          <div v-if="isSending">{{ translations.sending[language].replace("'","").replace("'","") }}</div>
         </div>
       </div>
     </div>
@@ -31,12 +32,15 @@
 
 <script>
   import * as contents from '@/contents/get'
+  const axios = require('axios')
   export default {
     name: 'ContactForm',
     data () {
       return{
         translations: contents.translations,
         language: 'en',
+        axios: axios,
+        isSending: false,
         form: {
           from: '',
           to: '',
@@ -53,6 +57,27 @@
       let language = localStorage.getItem('language')
       if(language !== null){
         app.language = language
+      }
+    },
+    methods: {
+      async sendMail(){
+        const app = this
+        if(app.form.from !== '' && app.form.to !== '' && app.form.name !== '' && app.form.children !== '' && app.form.adults !== '' && app.form.email !== ''){
+          app.isSending = true
+          let url = 'http://aquilataormina:3002'
+          if(window.location.host !== undefined){
+            url = 'http://' + window.location.host.replace('8080','3002')
+          }
+          let response = await app.axios.post(url + '/send', app.form)
+          app.isSending = false
+          if(response.data.accepted.length > 0){
+            alert(app.translations.send_success[app.language])
+          }else{
+            alert(app.translations.send_failed[app.language])
+          }
+        }else{
+          alert(app.translations.fill_all_fields[app.language])
+        }
       }
     }
   }
