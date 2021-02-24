@@ -23,11 +23,11 @@ long_description: >-
 
 
   The house is absolutely centrally located in one of the most beautiful squares (Piazza Varò) and only 100 steps away from Corso Umberto and the landmark Piazza IX Aprile.
-right_title_1: WIFI
-right_description_1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed
-  posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
-right_title_2: SUN TERRACE
+right_title_1: Rates
+right_description_1: Our rates are dependent on the season and the occupancy.
+  Please feel free to reach out to us and we will get you your personal quote
+  with a short notice. We look forward to welcome you at Aquila Apartments.
+right_title_2: Sunny Terrace
 right_description_2: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed
   posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
