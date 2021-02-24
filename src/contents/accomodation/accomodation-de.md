@@ -1,6 +1,6 @@
 ---
 third_image: /public/uploads/accomodation.jpg
-language: de
+language: en
 title: "Apartement #1"
 subtitle: LA BELLA
 init_description: Relax & Unwind
@@ -36,9 +36,7 @@ right_description_3: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed
   posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
 right_title_4: Parking Garage
-right_description_4: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed
-  posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+right_description_4: hhh
 second_image: /public/uploads/accomodation_3.jpg
 main_image: /public/uploads/slide_home.jpg
 ---
