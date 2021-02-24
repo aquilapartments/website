@@ -10,7 +10,7 @@ long_description: "###### nnn"
 right_title_1: Our Rates
 right_description_1: Our rates are dependent on the season and the occupancy.
   Please feel free to reach out to us and we will get you your personal quote
-  with a short notice. We look forward to welcome you at Aquila Apartments.
+  within a short notice. We look forward to welcome you at Aquila Apartments.
 right_title_2: Welcome Sunshine
 right_description_2: Imagine you wake up and just open the doors to breathe the
   beautiful morning air and the fresh breeze coming from the ocean. Jump out of
