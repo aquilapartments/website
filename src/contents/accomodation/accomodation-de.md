@@ -37,8 +37,15 @@ right_title_3: Luxury Interior
 right_description_3: Desinger Pieces collected from all over the world, chosen
   with the eye for beauty, make this place so special. Have you ever had your
   wine out of the real glasses from the RITZ in Paris? No, now you can.
-right_title_4: Parking Garage
-right_description_4: hhh
+right_title_4: Trip Advisor
+right_description_4: >-
+  We love Taormina and we know what to do. See our 10 Best Tips here. \
+
+  And for sure get in contact with us or our befriended partner [Legendary Sicily](https://www.legendarysicily.it/php/index.php).\
+
+  Or if you want to prebook your spot at [Delfino Beach](http://www.lidoildelfino.it/eng/index.html), just click.\
+
+  We get you covered with all needed items for your perfect day.
 second_image: /public/uploads/accomodation_3.jpg
 main_image: /public/uploads/slide_home.jpg
 ---
