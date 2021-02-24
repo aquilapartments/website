@@ -1,42 +1,36 @@
 ---
-language: de
-title: About Taormina
-main_description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ex
-  velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac viverra
-  eget, consectetur a metus. Vivamus urna dolor, rhoncus sit amet ante vitae,
-  lobortis sodales orci. Nulla sodales eleifend dolor eget faucibus. Quisque
-  nibh odio, dapibus at tempor venenatis, vestibulum at augue. Lorem ipsum dolor
-  sit amet, consectetur adipiscing elit. Nunc dapibus ex velit, ac auctor nisi
-  dictum luctus. Nullam ex tellus, interdum ac viverra eget, consectetur a
-  metus. Vivamus urna dolor, rhoncus sit amet ante vitae, lobortis sodales orci.
-  Nulla sodales eleifend dolor eget faucibus. Quisque nibh odio, dapibus at
-  tempor venenatis, vestibulum at augue.
+language: en
+title: Taormina, the pearl of the Mediterranean
+main_description: Idyllicly perched on a rocky promontory high above the sea,
+  Taormina has been the most popular tourist destination in Sicily for a couple
+  of hundred of years, ever since it became an integral part of the Grand Tour.
+  Beautifully restored mediaeval buildings, breathtaking views around every
+  corner and a giddy network of winding streets strewn with shops, bars and
+  restaurants make for a perfect holiday spot.
 secondary_description: >-
-  ### Parking Garage
+  ### 10 THINGS TO DO
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus
-  augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida
-  elit in felis consequat, ac dapibus felis maximus.
 
-  ### Parking Garage
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus
-  augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida
-  elit in felis consequat, ac dapibus felis maximus.
 
-  ### Parking Garage
+  ### \#1
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus
-  augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida
-  elit in felis consequat, ac dapibus felis maximus.
 
-  ### Parking Garage
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus
-  augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida
-  elit in felis consequat, ac dapibus felis maximus.
+
+  ### \#2
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+
+
+  ### \#3
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
 main_image: /public/uploads/taormina.jpg
 second_image: /public/uploads/accomodation_4.jpg
-third_image: /public/uploads/yacht.jpg
+third_image: /public/uploads/accomodation_3.jpg
 ---
