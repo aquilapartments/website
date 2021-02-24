@@ -1,6 +1,6 @@
 ---
 global: home_main_title
-en: Aquila Apartments
+en: AQUILA APARTMENTS
 it: Aquila Apartments
 de: Aquila Apartments
 ---
