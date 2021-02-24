@@ -1,6 +1,6 @@
 ---
 third_image: /public/uploads/accomodation.jpg
-language: en
+language: de
 title: "Apartement #1"
 subtitle: LA BELLA
 init_description: Relax & Unwind
