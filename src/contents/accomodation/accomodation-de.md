@@ -41,7 +41,10 @@ right_title_4: We are your Tripadvisor
 right_description_4: >-
   We love Taormina and we know what to do. See our 10 Best Tips here. \
 
-  And for sure get in contact with us or our befriended partner [Legendary Sicily](https://www.legendarysicily.it/php/index.php).\
+  And for sure get in contact with us or our befriended partner [Legendary Sicily](https://www.legendarysicily.it/php/index.php).
+
+
+  \
 
   Or if you want to prebook your spot at [Delfino Beach](http://www.lidoildelfino.it/eng/index.html), just click.\
 
