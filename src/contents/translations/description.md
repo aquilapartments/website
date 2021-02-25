@@ -1,6 +1,6 @@
 ---
 global: description
-en: What we offer
-it: What we offer
-de: What we offer
+en: Apartement La Bella
+it: Apartement La Bella
+de: Apartement La Belle
 ---
