@@ -82,9 +82,7 @@
       if(language !== null){
         app.language = language
       }
-      app.axios.get('https://api.openweathermap.org/data/2.5/weather?q=Taormina,IT&units=metric&appid=' + app.weatherkey).catch(err => {
-        console.log('Error fetching weather', err)
-      }).then(response => {
+      app.axios.get('https://api.openweathermap.org/data/2.5/weather?q=Taormina,IT&units=metric&appid=' + app.weatherkey).then(response => {
         if(response !== undefined){
           app.temp = response.data.list[0].main.temp
         }
