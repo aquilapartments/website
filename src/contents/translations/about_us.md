@@ -1,6 +1,6 @@
 ---
 global: about_us
-en: About us
-it: Su di noi
-de: About us
+en: The Project
+it: The Project
+de: The Project
 ---
