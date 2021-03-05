@@ -1,6 +1,6 @@
 ---
 global: sending
-en: 'Sending e-mail, please wait..'
-it: 'Invio e-mail, un momento..'
-de: 'Sending e-mail, please wait..'
+en: Sending e-mail, please wait...
+it: Invio e-mail, un momento...
+de: Ihre Nachricht wird versendet - bitte warten Sie...
 ---
