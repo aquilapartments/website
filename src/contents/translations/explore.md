@@ -2,5 +2,5 @@
 global: explore
 en: Explore
 it: Esplora
-de: Explore
+de: Entdecken Sie jetzt Taormina
 ---
