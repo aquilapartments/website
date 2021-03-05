@@ -1,6 +1,6 @@
 ---
 global: adults
-en: Adults
+en: How many adults?
 it: Adulti
-de: Erwachsene
+de: Wie viele Personen?
 ---
