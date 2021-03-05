@@ -2,5 +2,5 @@
 global: accomodation
 en: Accomodation
 it: Appartamento
-de: Apartement
+de: Unser Appartement
 ---
