@@ -1,6 +1,6 @@
 ---
 global: home_discoverytaormina_preview
 en: Welcome to Taormina
-it: Ciao
-de: Herzliche Willkommen
+it: Benvenuto a Taormina
+de: Herzliche Willkommen in Taormina
 ---
