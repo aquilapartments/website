@@ -34,7 +34,7 @@ function importAll (r, folder) {
                     property = k
                 }
                 if(content !== ''){
-                    files[folder][slug][property] += content.trim()
+                    files[folder][slug][property] += content.trim() + ' '
                 }else{
                     files[folder][slug][property] += "\n"
                 }
