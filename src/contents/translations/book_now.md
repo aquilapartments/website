@@ -1,6 +1,6 @@
 ---
 global: book_now
-en: Book now
+en: Request now your reservation
 it: Prenota
-de: Book now
+de: Jetzt Buchung anfragen
 ---

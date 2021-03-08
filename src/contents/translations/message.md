@@ -1,6 +1,6 @@
 ---
-global: message
-en: Message
+global: Message
+en: Your enquiry to us
 it: Messaggio
-de: Message
+de: Ihre Nachricht an uns
 ---

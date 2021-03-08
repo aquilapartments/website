@@ -1,6 +1,6 @@
 ---
 global: email
-en: E-Mail address
+en: E-Mail Adresse
 it: Indirizzo e-mail
 de: E-Mail address
 ---
