@@ -80,8 +80,8 @@
       if(language !== null){
         app.language = language
       }
-      app.about = app.abouts[language]
-      app.accomodation = app.accomodations['accomodation-' + language]
+      app.about = app.abouts[app.language]
+      app.accomodation = app.accomodations['accomodation-' + app.language]
     }
   }
 </script>
