@@ -1,6 +1,6 @@
 ---
 third_image: /public/uploads/accomodation.jpg
-language: en
+language: de
 title: LA BELLA
 subtitle: "Apartement #1"
 init_description: Going to Sicily is better than going to the moon! William Shakespeare
@@ -43,8 +43,12 @@ right_description_3: "Design Stücke aus aller Welt, die mit dem Blick für das
   Traditions Hotel morgens auf dem Balkon den ersten Espresso genossen? Jetzt
   können Sie"
 right_title_4: Taormina von seiner besten Seite
-right_description_4: Wir lieben Taormina und wissen, was zu tun ist. Sehen Sie
-  hier unsere 10 besten Tipps.
+right_description_4: >-
+  Wir lieben Taormina und wissen, was zu tun ist. Sehen Sie hier unsere 10
+  besten Tipps.
+
+
+  <https://de.wikipedia.org/wiki/Taormina>
 second_image: /public/uploads/accomodation_3.jpg
 main_image: /public/uploads/img_4610.jpg
 ---
