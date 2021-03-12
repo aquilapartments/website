@@ -8,7 +8,7 @@ main_description: Idyllicly perched on a rocky promontory high above the sea,
   corner and a giddy network of winding streets strewn with shops, bars and
   restaurants make for a perfect holiday spot.
 secondary_description: >-
-  ### 10 THINGS TO DO
+  ### 10 THINGS TO DO IN TAORMINA
 
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
@@ -27,6 +27,48 @@ secondary_description: >-
 
 
   ### \#3
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+
+
+  ### \#4
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+
+
+  ### \#5
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+
+
+  ### \#6
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+
+
+  ### \#7
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+
+
+  ### \#8
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+
+
+  ### \#9
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
+
+
+  ### \#10
 
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus finibus augue, nec egestas ante. Nullam fringilla in elit sed posuere. Quisque gravida elit in felis consequat, ac dapibus felis maximus.
