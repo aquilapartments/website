@@ -27,10 +27,10 @@ if(isset($data['from']) && isset($data['to']) && isset($data['adults']) && isset
     $mail= new PHPMailer();
     $mail->CharSet="UTF-8";
     $mail->IsSMTP(); // telling the class to use SMTP
-    $mail->Host       = "smtp.gmail.com"; // SMTP server
-    //$mail->SMTPDebug  = 2;
+    $mail->Host       = "smtp.sendgrid.net"; // SMTP server
+    $mail->SMTPDebug  = 2;
     $mail->SMTPAuth   = true;                  // enable SMTP authentication
-    $mail->Host       = "smtp.gmail.com"; // sets the SMTP server
+    $mail->Host       = "smtp.sendgrid.net"; // sets the SMTP server
     $mail->Port       = 465;
     $mail->SMTPSecure = 'ssl';
     $mail->Username   = $gmail_user; // SMTP account username
@@ -53,4 +53,6 @@ if(isset($data['from']) && isset($data['to']) && isset($data['adults']) && isset
     $mail->MsgHTML($message);
     $result = $mail->Send();
     print_r($result);
+}else{
+    echo "ERROR";
 }
