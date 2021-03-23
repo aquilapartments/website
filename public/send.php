@@ -35,9 +35,9 @@ if(isset($data['from']) && isset($data['to']) && isset($data['adults']) && isset
     $mail->SMTPSecure = 'ssl';
     $mail->Username   = $gmail_user; // SMTP account username
     $mail->Password   = $gmail_password;        // SMTP account password
-    $mail->SetFrom($gmail_user, "Aquila Website");
-    $mail->AddReplyTo($gmail_user, "Aquila Website");
-    $mail->AddAddress($gmail_user, "Aquila Website");
+    $mail->SetFrom("aquilapartments@gmail.com", "Aquila Website");
+    $mail->AddReplyTo("aquilapartments@gmail.com", "Aquila Website");
+    $mail->AddAddress("aquilapartments@gmail.com", "Aquila Website");
     $mail->AddAddress($data['email'], $data['name']);
     $mail->Subject  = "New booking from ".$data['name'];
     $message = "";
