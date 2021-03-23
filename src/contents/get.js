@@ -1,41 +1,58 @@
 var files = {};
 
-function importAll (r, folder) {
+function importAll(r, folder) {
     files[folder] = {}
     r.keys().forEach(key => {
-        let slug = key.replace('.md','').substr(2,key.length)
+        let slug = key.replace('.md', '').substr(2, key.length)
         let contents = r(key).default.split("\n")
         files[folder][slug] = {}
         let max = contents.length - 1
-        for(let i = 1; i < max; i++){
+        for (let i = 1; i < max; i++) {
             let content = contents[i]
             let cut = content.indexOf(':')
-            if(cut !== -1){
-                let property = content.substr(0,cut)
-                let value = content.replace(property + ': ','')
-                if(property.trim() !== 'https' && property.trim() !== 'http'){
-                    if(property !== '' && value !== ''){
-                        if(value !== '>-'){
+            if (cut !== -1) {
+                let property = content.substr(0, cut)
+                let value = content.replace(property + ': ', '')
+                if (property.trim() !== 'https' && property.trim() !== 'http' && property.trim() !== '<https' && property.trim() !== 'https') {
+                    if (property !== '' && value !== '') {
+                        if (value !== '>-') {
                             files[folder][slug][property] = value
-                        }else{
+                        } else {
                             files[folder][slug][property] = ''
                         }
                     }
-                }else{
+                } else {
+                    // There's a link
+                    if (content.indexOf('<') !== -1) {
+                        content = content.replace('<', '')
+                        content = content.replace('>', '')
+                        content = '<a href="' + content + '">' + content.trim() + '</a>'
+                    }
                     property = ''
-                    for(let k in files[folder][slug]){
+                    for (let k in files[folder][slug]) {
                         property = k
                     }
-                    files[folder][slug][property] += content.trim()
+                    files[folder][slug][property] += content
                 }
-            }else if(content !== '---'){
+            } else if (content !== '---') {
                 let property
-                for(let k in files[folder][slug]){
+                for (let k in files[folder][slug]) {
                     property = k
                 }
-                if(content !== ''){
-                    files[folder][slug][property] += content.trim() + ' '
-                }else{
+                if (content !== '') {
+                    if(i === 1){
+                        files[folder][slug][property] += content.trim()
+                    }else{
+                        if(property.indexOf('secondary_description') !== -1){
+                            console.log(files[folder][slug][property])
+                        }
+                        if(property.indexOf('description') === -1){
+                            files[folder][slug][property] += content + ' '
+                        }else{
+                            files[folder][slug][property] += content.trim() + ' '
+                        }
+                    }
+                } else {
                     files[folder][slug][property] += "\n"
                 }
             }
@@ -59,4 +76,4 @@ module.exports = {
     extraservice: files['extraservice'],
     accomodationslider: files['accomodationslider'],
     about: files['about']
-} 
+}

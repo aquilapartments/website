@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-8 visible-xs">
         <carousel :perPage=1>
-          <slide v-for="slide in topslide" v-bind:key="slide.order">
+          <slide v-for="slide in topslide" v-bind:key="slide.image">
             <div class="slidehome-img" :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'"></div>
           </slide>
         </carousel>
@@ -11,14 +11,14 @@
       <div class="col-sm-4">
         <div class="home-slide-description">
           <h1>{{ translations.home_main_title[language] }}</h1>
-          <h1 style="font-weight:200!important">{{ translations.home_main_subtitle[language] }}</h1><br>
+          <h1 class="subh1" style="font-weight:200!important">{{ translations.home_main_subtitle[language] }}</h1><br>
           <p>{{ translations.home_main_description[language] }}</p><br>
           <br><a href="#"><div class="btn btn-aquila">{{ translations.book_now[language] }}</div></a>
         </div>
       </div>
       <div class="col-sm-8 hidden-xs">
         <carousel :perPage=1>
-          <slide v-for="slide in bottomslide" v-bind:key="slide.order">
+          <slide v-for="slide in topslide" v-bind:key="slide.image">
             <div class="slidehome-img" :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'"></div>
           </slide>
         </carousel>
@@ -55,11 +55,10 @@
       </div>
     </div>
 
-    <div class="container">
+    <!--<div class="container">
       <div class="row">
         <div class="col-12">
           <div class="swiper-container" style="margin-bottom:100px; overflow:inherit">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <div class="swiper-slide home-slide" v-for="slide in bottomslide" v-bind:key="slide.order"  :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'">
                   <div class="slide-shadow"></div>
@@ -67,13 +66,13 @@
                     <div class="slide-button-head">{{ slide['caption_' + language] }}</div>
                     Explore <img src="../../public/img/arrow.png" height="14">
                   </div>
-                </div> <!--slide-->
+                </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <div class="" style="margin-bottom:100px">
       <div class="row">

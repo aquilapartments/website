@@ -232,6 +232,10 @@
     line-height: 48px;
   }
 
+  .subh1{
+    font-size:30px!important;
+    line-height: 38px!important;
+  }
   .hone-slide-description p{
     font-size: 16px;
     color: #545454;
@@ -281,7 +285,7 @@
   .home-tile h4{
     font-weight:500;
     margin-bottom:20px;
-    font-size: 16px;
+    font-size: 24px;
     color: #363636;
     letter-spacing: 0.73px;
     text-align: center;

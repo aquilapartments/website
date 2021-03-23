@@ -34,7 +34,7 @@
         <div class="col-sm-9">
           <div class="accomodation-description">
             <h1>{{ translations.description[language] }}<br><span style="font-weight:100">{{ accomodation.subtitle }}</span></h1>
-            <p>{{ accomodation.long_description }}</p>
+            <p v-html="accomodation.long_description"></p>
           </div>
         </div>
         <div class="col-sm-3">
@@ -99,6 +99,7 @@
         app.language = language
       }
       app.accomodation = app.accomodations['accomodation-' + app.language]
+      console.log(app.accomodations)
     }
   }
 </script>
@@ -111,8 +112,8 @@
   .accomodation-description{
     text-align:justify;
     margin:30px 0;
-    font-weight:100;
-    font-size: 35px;
+    font-weight:300;
+    font-size: 25px;
     color: #8B8B8B;
     letter-spacing: 0;
     text-align: justify;

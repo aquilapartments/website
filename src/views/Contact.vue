@@ -11,14 +11,22 @@
           </div>
         </div>
         <div class="col-sm-8">
-          <iframe :src="accomodation.location" width="100%" height="850" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <div class="head-image" :style="'background-image:url(\'/uploads/taormina.jpg\')'"></div>
         </div>
       </div>
       <ContactForm/>
     </div>
   </div>
 </template>
-
+<style scoped>
+  .head-image{
+    width:100%;
+    height:70vh;
+    background-image:url('../../public/placeholders/taormina.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+</style>
 <script>
   import * as contents from '@/contents/get'
   import ContactForm from '@/components/ContactForm.vue'

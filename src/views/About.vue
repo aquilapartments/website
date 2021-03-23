@@ -10,7 +10,6 @@
           </div>
         </div>
       </div>
-
       <div class="row" style="margin-top:80px">
         <div class="col-sm-4 text-left left-description">
           <vue-simple-markdown :source="about.secondary_description"></vue-simple-markdown>
@@ -101,7 +100,7 @@
     width:100%;
     padding:80px 130px;
     text-align: justify; 
-    font-weight: 100;
+    font-weight: 300;
     font-size: 35px;
     color: #8B8B8B;
     letter-spacing: 0;
@@ -111,8 +110,8 @@
 
   .taormina-description .markdown-body{
     text-align: justify; 
-    font-weight: 100;
-    font-size: 35px;
+    font-weight: 300;
+    font-size: 25px;
     color: #8B8B8B;
     letter-spacing: 0;
     text-align: justify;
@@ -123,7 +122,7 @@
     color:#000;
     margin-top:0;
     padding-top:0;
-    font-weight: 100;
+    font-weight: 300;
   }
 
   .left-description{
