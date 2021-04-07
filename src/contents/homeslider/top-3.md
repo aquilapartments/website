@@ -1,0 +1,5 @@
+---
+order: "3"
+image: /public/uploads/accomodation_4.jpg
+type: top
+---
