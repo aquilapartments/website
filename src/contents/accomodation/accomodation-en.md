@@ -34,11 +34,11 @@ right_description_2: Imagine waking up and just opening the doors to breathe in
   comfortable beds with exquisite linens and enjoy a refreshing rain shower in
   our beautiful and elegant bathroom.
 right_title_3: Luxurious furnishings
-right_description_3: '"Design pieces from all over the world, selected with an
-  eye for the special, make this place something special. And that'
+right_description_3: Design pieces from all over the world, selected with an eye
+  for the special, make this place something special.
 right_title_4: Taormina at its best
-right_description_4: We love Taormina and we know what to do. See our 10 best
-  tips[ here](http://aquilataormina.com/#/about-taormina)
+right_description_4: Amiamo Taormina e sappiamo cosa fare. Guarda i nostri 10
+  migliori consigli [qui](http://aquilataormina.com/#/about-taormina)
 second_image: /public/uploads/accomodation_3.jpg
 main_image: /public/uploads/slide_home.jpg
 ---
