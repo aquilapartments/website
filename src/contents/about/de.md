@@ -1,5 +1,5 @@
 ---
-language: en
+language: de
 title: Taormina, the pearl of the Mediterranean
 main_description: Idyllicly perched on a rocky promontory high above the sea,
   Taormina has been the most popular tourist destination in Sicily for a couple
