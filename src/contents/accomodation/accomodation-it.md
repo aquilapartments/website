@@ -1,8 +1,8 @@
 ---
 third_image: /public/uploads/accomodation.jpg
 language: de
-title: Accomodation
-subtitle: Number 1
+title: "La Bella "
+subtitle: "Appartement #1"
 init_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
   dapibus ex velit, ac auctor nisi dictum luctus. Nullam ex tellus, interdum ac
   viverra eget, consectetur a metus.
