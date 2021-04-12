@@ -1,6 +1,6 @@
 ---
 third_image: /public/uploads/accomodation.jpg
-language: it
+language: en
 title: La Bella
 subtitle: "Apartement #1"
 init_description: Going to Sicily is better than going to the moon! William Shakespeare
