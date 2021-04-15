@@ -37,8 +37,7 @@ right_title_3: Luxurious furnishings
 right_description_3: Design pieces from all over the world, selected with an eye
   for the special, make this place something special.
 right_title_4: Taormina at its best
-right_description_4: Amiamo Taormina e sappiamo cosa fare. Guarda i nostri 10
-  migliori consigli [qui](http://aquilataormina.com/#/about-taormina)
+right_description_4: We love Taormina and we know what to do. Let our top 10 tips inspire you.
 second_image: /public/uploads/accomodation_3.jpg
 main_image: /public/uploads/slide_home.jpg
 ---
