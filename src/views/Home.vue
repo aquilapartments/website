@@ -2,7 +2,7 @@
   <div class="home">
     <div class="row">
       <div class="col-sm-8 visible-xs">
-        <carousel :perPage=1>
+        <carousel :autoplay="true" :navigationEnabled="true" :perPage=1>
           <slide v-for="slide in topslide" v-bind:key="slide.image">
             <div class="slidehome-img" :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'"></div>
           </slide>
