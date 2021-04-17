@@ -1,7 +1,7 @@
 ---
 language: it
 title: La Bella
-subtitle: "Apartamento #1"
+subtitle: "Appartamento #1"
 init_description: Andare in Sicilia è meglio che andare sulla luna! William Shakespeare
 address: Piazza Varò 98039 Taormina ME
 location: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.369585080524!2d15.282543015414682!3d37.85164187974546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131411a39251c7f9%3A0x2654f47409ca387a!2sPiazza%20Var%C3%B2%2C%2098039%20Taormina%20ME!5e0!3m2!1sen!2sit!4v1580329882609!5m2!1sen!2sit
