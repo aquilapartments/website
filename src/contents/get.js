@@ -43,9 +43,6 @@ function importAll(r, folder) {
                     if(i === 1){
                         files[folder][slug][property] += content.trim()
                     }else{
-                        if(property.indexOf('secondary_description') !== -1){
-                            console.log(files[folder][slug][property])
-                        }
                         if(property.indexOf('description') === -1){
                             files[folder][slug][property] += content + ' '
                         }else{

@@ -98,6 +98,7 @@
       if(language !== null){
         app.language = language
       }
+      console.log(contents)
       app.accomodation = app.accomodations['accomodation-' + app.language]
       console.log(app.accomodations)
     }

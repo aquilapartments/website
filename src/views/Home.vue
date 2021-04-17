@@ -2,7 +2,7 @@
   <div class="home">
     <div class="row">
       <div class="col-sm-8 visible-xs">
-        <carousel :autoplay="true" :navigationEnabled="true" :perPage=1>
+        <carousel :autoplay="true" :perPage=1>
           <slide v-for="slide in topslide" v-bind:key="slide.image">
             <div class="slidehome-img" :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'"></div>
           </slide>
@@ -16,8 +16,8 @@
           <br><a href="#"><div class="btn btn-aquila">{{ translations.book_now[language] }}</div></a>
         </div>
       </div>
-      <div class="col-sm-8 hidden-xs">
-        <carousel :perPage=1>
+      <div class="col-sm-8 hidden-xs" style="cursor: grab;">
+        <carousel :autoplay="true" :paginationEnabled="true" :perPage=1>
           <slide v-for="slide in topslide" v-bind:key="slide.image">
             <div class="slidehome-img" :style="'background-image:url(\'' + slide.image.replace('/public','') + '\')'"></div>
           </slide>
