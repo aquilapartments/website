@@ -11,7 +11,7 @@
   "author": "turinglabsorg",
   "license": "MIT",
   "dependencies": {
-    "simple-git": "^1.132.0"
+    "simple-git": "^3.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
